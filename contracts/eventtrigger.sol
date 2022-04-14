@@ -14,12 +14,14 @@ contract Item {
         itemIndex = _itemIndex;
     }
 
-    fallback () external payable {
+    function pay (ItemManager _parentContract) external payable {
         require (pricePaid == 0, "Item is paid for already.");
         require (itemPriceInWei == msg.value, "Please pay exact amount.");
         pricePaid += msg.value;
-        (bool success, ) = address (parentContract).call{value : msg.value, gas : 20000 }(abi.encodeWithSignature("triggerPayment(uint256)", itemIndex));
-        require (success, "Transaction unsuccessful, cancelling payment");
+        //address payable mainAddr = address(parentContract);
+        _parentContract.triggerPayment{value : msg.value}(itemIndex);
+        //(bool success, ) =  address(parentContract).call{value : msg.value, gas : 80000000 }(abi.encodeWithSignature("triggerPayment(uint256)", itemIndex));
+        //require (success, "Transaction unsuccessful, cancelling payment");
     }
 
     //fallback () external payable {}
@@ -52,7 +54,7 @@ contract ItemManager {
         itemIndex++;
     }
 
-    function triggerPayment (uint _itemIndex) public payable{
+    function triggerPayment (uint _itemIndex) external payable{
         require (items[_itemIndex]._itemPrice == msg.value, "Please pay exact amount.");
         require (items[_itemIndex]._state == AutoChainState.Created, "Item has been already paid for or delivered");
         
