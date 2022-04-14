@@ -8,11 +8,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "contract ItemManager",
-						"name": "_parentContract",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
 						"name": "_itemPriceInWei",
 						"type": "uint256"
@@ -21,6 +16,11 @@
 						"internalType": "uint256",
 						"name": "_itemIndex",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -29,6 +29,19 @@
 			{
 				"stateMutability": "payable",
 				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "addr",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -83,7 +96,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/eventtrigger.sol": "Item"
+			"contracts/item.sol": "Item"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -97,12 +110,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/eventtrigger.sol": {
-			"keccak256": "0xb7737a2f7d8a3dbb2b9049a664dc42b907569ed74855bf20f1aa6641e7c683c1",
+		"contracts/item.sol": {
+			"keccak256": "0x8767b78ab3ae485bea729ccb87f259b07803f3e06a930e810a391bc8de354492",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3a23db808698b3432da9528d5f588e96c2219e6f6f1b8462a18df6cdc3e81118",
-				"dweb:/ipfs/QmUiA1mwnMqfE8pi3BzoAfWQycB5wMkuJP4XGHmRjKBsv5"
+				"bzz-raw://ad8e2871de8c21ed530c6ff9301541c3dffed6804670032f49ce7094ed935166",
+				"dweb:/ipfs/QmSrLFHRzN5k2awDY3UxTmNUWHUdqPu4t2Te62qy8D8uAY"
 			]
 		}
 	},
