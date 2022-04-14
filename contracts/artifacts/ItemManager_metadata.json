@@ -136,12 +136,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/itemmanager.sol": {
-			"keccak256": "0x7f92d0ca69bdaf7decb1a5ee40b75867a4b27d5089e7fa96a9dd759918dc7076",
+		"contracts/item.sol": {
+			"keccak256": "0x8767b78ab3ae485bea729ccb87f259b07803f3e06a930e810a391bc8de354492",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8811ee1ee294bd0594198f264627b9d5683815b4a539b996e587f5e39883b0f5",
-				"dweb:/ipfs/QmXLen7pFKetNPVXbKm3JciZPRuGQoK92AgGkVfeM2hjuj"
+				"bzz-raw://ad8e2871de8c21ed530c6ff9301541c3dffed6804670032f49ce7094ed935166",
+				"dweb:/ipfs/QmSrLFHRzN5k2awDY3UxTmNUWHUdqPu4t2Te62qy8D8uAY"
+			]
+		},
+		"contracts/itemmanager.sol": {
+			"keccak256": "0x644d4275f92518784dc46436c34674fa3d9d644cbd6defd336e1f10beb93658e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://66ab61ff90080ff228ac79b08b90f435dcd06212995650c41c6b24a2002db876",
+				"dweb:/ipfs/QmcDVB3LykviiBU3fEVMnauDfrrfHWnfsqmiSH7pytTSLt"
 			]
 		}
 	},
