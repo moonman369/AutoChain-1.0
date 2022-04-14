@@ -122,7 +122,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/eventtrigger.sol": "ItemManager"
+			"contracts/itemmanager.sol": "ItemManager"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -136,12 +136,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/eventtrigger.sol": {
-			"keccak256": "0xd5bb8bbab9b2c45e050fc6f557e118dcf63b6a76389a6983a7be581cf1fce471",
+		"contracts/itemmanager.sol": {
+			"keccak256": "0x7f92d0ca69bdaf7decb1a5ee40b75867a4b27d5089e7fa96a9dd759918dc7076",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://40097996330dc07fba2f855e5e08337cbc8228057994b6641d2ff98b54346227",
-				"dweb:/ipfs/QmfEtXe65LwXDyFRZufvJEWsJBhML9YwBa2JuuPvb5Zwkk"
+				"bzz-raw://8811ee1ee294bd0594198f264627b9d5683815b4a539b996e587f5e39883b0f5",
+				"dweb:/ipfs/QmXLen7pFKetNPVXbKm3JciZPRuGQoK92AgGkVfeM2hjuj"
 			]
 		}
 	},
