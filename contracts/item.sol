@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Item {
+contract Item{
     uint public itemPriceInWei;
     uint public pricePaid;
     uint public itemIndex;
     address public addr;
 
-    constructor(uint _itemPriceInWei, uint _itemIndex, address _addr) public {
+    constructor(uint _itemPriceInWei, uint _itemIndex, address _addr) {
         itemPriceInWei = _itemPriceInWei;
         itemIndex = _itemIndex;
         addr = _addr;
