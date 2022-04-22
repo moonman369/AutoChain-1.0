@@ -2,8 +2,9 @@
 pragma solidity ^0.8.0;
 
 import "./item.sol";
+import "./ownable.sol";
 
-contract ItemManager {
+contract ItemManager is Ownable{
 
     enum AutoChainState {Null, Created, Paid, Delivered}
 
@@ -25,7 +26,7 @@ contract ItemManager {
     //     return items[_itemIndex]._state;
     // }
 
-    function createItem (string memory _identifier, uint _itemPrice) public {
+    function createItem (string memory _identifier, uint _itemPrice) public onlyOwner{
 
         items[itemIndex]._item = new Item(_itemPrice, itemIndex, address(this));
         items[itemIndex]._identifier = _identifier;
@@ -43,7 +44,7 @@ contract ItemManager {
         emit AutoChainEvent(_itemIndex, items[_itemIndex]._state, address(items[_itemIndex]._item));
     }
 
-    function triggerDelivery (uint _itemIndex) public {
+    function triggerDelivery (uint _itemIndex) public onlyOwner{
         require (items[_itemIndex]._state == AutoChainState.Paid, "Item awaiting payment...");
         items[_itemIndex]._state = AutoChainState.Delivered;
         emit AutoChainEvent(_itemIndex, items[_itemIndex]._state, address(items[_itemIndex]._item));
